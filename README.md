@@ -42,7 +42,7 @@ npm start
 ### Windows Commands
 - `npm run build-electron-win` - builds your Angular2 app and throws the result as well as your electron main.js file into the dist folder for windows.
 - `npm start-win` - runs `npm run build-electron-win` and starts your app in electron by running `main.js` for windows.
-- `npm run package-windows-win` - builds your application and creates an app consumable in windows 32 bit systems. NOTE: If you build this on MAC OS or linux you need wine installed, which can be installed with `brew install wine`
+- `npm run package-windows-win` - builds your application and creates an app consumable in windows 32 bit systems.
 - `npm run package-linux-win` - builds your application and creates an app consumable on linux systems.
 - `npm run full-build-windows-win` - creates an installer for windows platforms.
 
