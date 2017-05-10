@@ -1,0 +1,71 @@
+<div class="container-fluid fill">
+    <div class="row menubar" style="background-color: darkgrey">
+        <div class="col-2 menubar-dashboard active" [routerLink]="['/']"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</div>
+        <div class="col-2 menubar-receive" onclick="receive()"><i class="fa fa-sign-in " aria-hidden="true"></i> Receive</div>
+        <div class="col-2 menubar-send" onclick="send()"><i class="fa fa-sign-out " aria-hidden="true"></i> Send</div>
+        <div class="col-2 menubar-transactions" onclick="transactions()"><i class="fa fa-credit-card " aria-hidden="true"></i> Transactions</div>
+        <div class="col-2 menubar-addresses" onclick="addresses()"><i class="fa fa-address-book-o " aria-hidden="true"></i> Addresses</div>
+        <div class="col-2 menubar-masternodes" onclick="masternodes()"><i class="fa fa-server" aria-hidden="true"></i> Masternodes</div>
+    </div>
+
+    <!-- Router Outlet -->
+    <router-outlet>
+        <div class="row contentrow fill" id="dashboard" style="background-color: darkgrey">
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-12" style="color: #000000; font-weight: 800;">Balances</div>
+                </div>
+                <div class="row">
+                    <div class="col-3" style="color: #000000">Available</div>
+                    <div class="col-9" style="color: #000000; font-weight: 800;">0 ION</div>
+                </div>
+                <div class="row">
+                    <div class="col-3" style="color: #000000">Stake</div>
+                    <div class="col-9" style="color: #000000; font-weight: 800;">0 ION</div>
+                </div>
+                <div class="row">
+                    <div class="col-3" style="color: #000000">Pending</div>
+                    <div class="col-9" style="color: #000000; font-weight: 800;">0 ION</div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-3" style="color: #000000">Total</div>
+                    <div class="col-9" style="color: #000000; font-weight: 800;">0 ION</div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-12" style="color: #000000"> Recent Transactions</div>
+                </div>
+                <div class="row">
+                    <div class="col-2" style="color: #000000"><i class="fa fa-sign-in fa-4x" aria-hidden="true"></i></div>
+                    <div class="col-7" style="color: #000000">
+                        <div class="row">
+                        </div>
+                        <div class="row">
+                        </div>
+                    </div>
+                    <div class="col-3" style="color: #0f7c01"> + 0 ION</div>
+                </div>
+                <div class="row">
+                    <div class="col-2" style="color: #000000"><i class="fa fa-sign-out fa-4x" aria-hidden="true"></i></div>
+                    <div class="col-7" style="color: #000000">
+                        <div class="row">
+                        </div>
+                        <div class="row">
+                        </div>
+                    </div>
+                    <div class="col-3" style="color: #a00303 "> - 0 ION</div>
+                </div>
+            </div>
+        </div>
+    </router-outlet>
+    <div class="row" style="background-color: darkgrey; bottom:0px;">
+        <div class="col-10"></div>
+        <div class="col-2 pull-right">
+            <div class="pull-right">
+                <img src="/layouts/design1/img/notsynced.png" style="display:none;height: 20px; width: 20px;">
+            </div>
+        </div>
+    </div>
+</div>
