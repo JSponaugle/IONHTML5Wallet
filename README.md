@@ -31,16 +31,20 @@ Build angular2 code and run current app locally (DOES NOT CURRENTLY DO HOT RELOA
 npm start
 ```
 ## Included Commands
-
+### Mac OSX and Linux Commands
 - `npm run build-electron` - builds your Angular2 app and throws the result as well as your electron main.js file into the dist folder
-- `npm run build-electron-win` - builds your Angular2 app and throws the result as well as your electron main.js file into the dist folder for windows.
 - `npm start` - runs `npm run build-electron` and starts your app in electron by running `main.js`
-- `npm start-win` - runs `npm run build-electron-win` and starts your app in electron by running `main.js` for windows.
 - `npm run package-mac` - builds your application and generates a `.app` file of your application that can be run on mac. NOTE: I am like 99% sure you need to be on a MAC OS machine to be able to run this.
 - `npm run package-windows` - builds your application and creates an app consumable in windows 32 bit systems. NOTE: If you build this on MAC OS or linux you need wine installed, which can be installed with `brew install wine`
 - `npm run package-linux` - builds your application and creates an app consumable on linux systems.
 - `npm run full-build-mac` - creates a `.dmg` installer for mac platforms.
 - `npm run full-build-windows` - creates an installer for windows platforms.
+### Windows Commands
+- `npm run build-electron-win` - builds your Angular2 app and throws the result as well as your electron main.js file into the dist folder for windows.
+- `npm start-win` - runs `npm run build-electron-win` and starts your app in electron by running `main.js` for windows.
+- `npm run package-windows-win` - builds your application and creates an app consumable in windows 32 bit systems. NOTE: If you build this on MAC OS or linux you need wine installed, which can be installed with `brew install wine`
+- `npm run package-linux-win` - builds your application and creates an app consumable on linux systems.
+- `npm run full-build-windows-win` - creates an installer for windows platforms.
 
 ## Electron
 
