@@ -8,9 +8,7 @@
   "main": "dist/main.js",
   "scripts": {
     "build-electron": "ng build --base-href . && cp src/electron/* dist",
-    "build-electron-win": "ng build --base-href . && copy src\\electron\\* dist",
     "start": "npm run build-electron && electron dist/main.js",
-    "start-win": "npm run build-electron-win && electron dist/main.js",
     "package-mac": "npm run build-electron && electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --prune=true --out=release-builds",
     "package-windows": "npm run build-electron-win && electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds",
     "package-linux": "npm run build-electron && electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --prune=true --out=release-builds",
@@ -20,7 +18,14 @@
     "full-build-windows": "npm run build-electron-win && npm run package-windows && npm run create-installer-windows",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    /* Windows Only Commands*/
+    "build-electron-win": "ng build --base-href . && copy src\\electron\\* dist",
+    "start-win": "npm run build-electron-win && electron dist/main.js",
+    "package-windows-win": "npm run build-electron-win && electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds",
+    "package-linux-win": "npm run build-electron-win && electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --prune=true --out=release-builds",
+    "create-installer-windows-win": "node installers/windows/createinstaller.js",
+    "full-build-windows-win": "npm run build-electron-win && npm run package-windows && npm run create-installer-windows",
   },
   "private": true,
   "dependencies": {
